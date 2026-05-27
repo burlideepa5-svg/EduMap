@@ -43,19 +43,18 @@ EduMap aims to simplify career exploration by providing structured guidance, car
 ## Project Structure
 
 EduMap/
-│
-├── config/
-├── css/
-├── js/
-├── php/
-├── index.html
-├── careers.html
-├── education.html
-├── quizA.html
-├── quizB.html
-├── result.html
-├── result_ug.html
-└── edumap.sql
+config/
+css/
+js/
+php/
+index.html
+careers.html
+education.html
+quizA.html
+quizB.html
+result.html
+result_ug.html
+edumap.sql
 
 ---
 
