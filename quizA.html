@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduMap – Career Quiz</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/quizA.css" />
+  
+</head>
+<body>
+
+ <header class="hero" style="padding:35px 20px;text-align:center;">
+<h1 style="font-size:1.9rem;">EduMap Career Quiz</h1>
+<p class="tagline">Discover how you naturally think and work</p>
+</header>
+
+  <div class="quiz-container">
+    
+    <!-- Progress Bar -->
+    <div class="quiz-progress">
+      <div class="quiz-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Question Number -->
+    <div class="quiz-question-number" id="questionNumber">Question 1 of 25</div>
+
+    <!-- Question -->
+    <div class="quiz-question" id="questionText">
+      Loading question...
+    </div>
+
+    <!-- Options -->
+    <div class="quiz-options" id="optionsContainer">
+      <!-- Options appear via JS -->
+    </div>
+
+    <!-- Error -->
+    <div id="errorMsg">Please select an option to continue.</div>
+
+    <!-- Navigation -->
+    <div class="quiz-nav">
+      <button class="quiz-btn secondary" id="prevBtn">Previous</button>
+      <button class="quiz-btn" id="nextBtn">Next</button>
+    </div>
+
+  </div>
+
+  <script src="js/quizA.js"></script>
+
+</body>
+</html>

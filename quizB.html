@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduMap — UG Career Assessment</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/quizB.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="wizard-card">
+      <div class="wizard-header">
+        <div class="logo">🧭</div>
+        <div class="wizard-title">
+          <h2>UG Career Assessment</h2>
+          <p class="muted">
+            A 5-section guided assessment based on your background, traits, and future goals.
+          </p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div id="pill1" class="step-pill active"></div>
+        <div id="pill2" class="step-pill"></div>
+        <div id="pill3" class="step-pill"></div>
+        <div id="pill4" class="step-pill"></div>
+        <div id="pill5" class="step-pill"></div>
+      </div>
+      <div class="step-labels">
+  <span>Background</span>
+  <span>Traits I</span>
+  <span>Traits II</span>
+  <span>Pathways I</span>
+  <span>Pathways II</span>
+</div>
+
+      <form id="quizBForm">
+        <section id="section1" class="section active"></section>
+        <section id="section2" class="section"></section>
+        <section id="section3" class="section"></section>
+        <section id="section4" class="section"></section>
+        <section id="section5" class="section"></section>
+
+        <div class="wizard-nav">
+          <button type="button" id="backBtn" class="btn ghost">Back</button>
+          <button type="button" id="nextBtn" class="btn primary">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/quizB.js"></script>
+</body>
+</html>

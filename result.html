@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduMap | Career Result</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/result.css">
+
+</head>
+
+<body>
+
+<!-- HERO HEADER -->
+
+<header class="hero">
+
+<div class="logo">
+<span class="icon">🧭</span>
+<h1>EduMap</h1>
+</div>
+
+<p class="tagline">
+Your personalized career insight
+</p>
+
+</header>
+
+
+<main class="result-container">
+
+<!-- STREAM RESULT -->
+
+<section class="result-section" id="streamCard"></section>
+
+<!-- STRENGTHS -->
+
+<section class="result-section" id="strengthsSection">
+
+<h3>✨ Your Core Strengths</h3>
+
+<div id="strengthsContainer"></div>
+
+</section>
+
+<!-- CAREER GRID -->
+
+<section class="result-section">
+
+<h3>🎯 Career Paths Based on Your Strengths</h3>
+
+<div class="career-grid" id="careerGrid"></div>
+
+<div class="explore-more-box">
+  <p>
+    You can also explore other career paths based on your interests.
+  </p>
+  <a href="careers.html" class="explore-link">
+    🔍 Explore More Careers
+  </a>
+</div>
+
+</section>
+
+<!-- NEXT PATH (UG only but needed by JS) -->
+
+<section class="result-section">
+
+<h3>🧭 Your Recommended Next Step</h3>
+
+<div id="nextPathBox"></div>
+
+</section>
+
+<!-- ACTION PLAN -->
+
+<section class="result-section">
+
+<h3>🚀 Guided Action Plan</h3>
+
+<ul class="next-steps" id="nextSteps"></ul>
+
+</section>
+
+
+<!-- ACTION BUTTONS -->
+
+<div class="actions">
+
+<a href="education.html" class="btn btn-secondary">
+Retake Quiz
+</a>
+
+<a href="index.html" class="btn btn-primary">
+Go Home
+</a>
+
+</div>
+
+
+<!-- SHARE BUTTONS -->
+
+<div class="share-buttons">
+
+<button class="download-btn" onclick="downloadPDF()">
+📥 Download Result
+</button>
+
+<button class="whatsapp-btn" onclick="shareWhatsApp()">
+📲 Share on WhatsApp
+</button>
+
+</div>
+
+
+</main>
+
+<!-- SHARE FUNCTIONS -->
+
+<script>
+
+function downloadPDF(){
+window.print();
+}
+
+function shareWhatsApp(){
+
+const careers =
+document.getElementById("careerGrid")?.innerText || "";
+
+const steps =
+document.getElementById("nextSteps")?.innerText || "";
+
+const text = `
+
+EduMap Career Result
+
+Career Fields:
+${careers}
+
+Next Steps:
+${steps}
+
+Generated via EduMap Career Guidance System.
+
+`;
+
+window.open(
+"https://wa.me/?text=" + encodeURIComponent(text),
+"_blank"
+);
+
+}
+
+</script>
+<script type="module" src="js/result.js"></script>
+</body>
+</html>

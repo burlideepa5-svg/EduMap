@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>EduMap — Choose Education Level</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/education.css">
+
+</head>
+
+<body>
+
+<header class="hero small-hero">
+<div class="logo">
+<span class="icon">🧭</span>
+<h1>EduMap</h1>
+</div>
+
+<p class="tagline">
+Tell us where you are now — we'll guide your next step.
+</p>
+</header>
+
+
+<main class="level-page">
+
+<div class="level-header">
+<h2>Choose Your Current Education Level</h2>
+<p class="note">Select one option to continue.</p>
+</div>
+
+
+<div class="level-grid">
+
+<!-- Class 9-10 -->
+
+<div class="level-card" data-level="class9-10">
+
+<div class="card-icon">🎒</div>
+
+<div>
+<h3>Class 9–10</h3>
+<p>Get guidance for choosing a stream after 10th.</p>
+</div>
+
+</div>
+
+
+
+<!-- Class 11-12 -->
+
+<div class="level-card" data-level="class11-12">
+
+<div class="card-icon">📚</div>
+
+<div class="card-content">
+
+<h3>Class 11–12</h3>
+<p>Choose your stream and subject combination.</p>
+
+<div class="stream-options" id="streamOptions">
+
+<button class="stream-btn" data-stream="science">Science</button>
+<button class="stream-btn" data-stream="commerce">Commerce</button>
+<button class="stream-btn" data-stream="arts">Arts</button>
+
+</div>
+
+<p id="subjectLabel" class="subject-title">
+Choose your subject combination
+</p>
+
+<div class="stream-options" id="subjectOptions"></div>
+
+</div>
+</div>
+
+
+
+<!-- Undergraduate -->
+
+<div class="level-card" data-level="ug">
+
+<div class="card-icon">🎓</div>
+
+<div>
+<h3>Undergraduate (UG)</h3>
+<p>Discover career paths after your degree.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="actions">
+
+  <a href="index.html" class="btn secondary">
+    ← Home
+  </a>
+
+  <a href="" id="continueBtn" class="btn primary" >
+    Continue to Quiz →
+  </a>
+
+</div>
+
+<p class="error" id="errorMsg"></p>
+
+</main>
+
+
+<script src="js/education.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* PAGE LAYOUT */
+
+.level-page{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+.level-header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.note{
+color:#666;
+font-size:.95rem;
+margin-top:6px;
+}
+
+.small-hero{
+padding:40px 20px;
+}
+
+
+/* GRID */
+
+.level-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:25px;
+}
+
+
+/* LEVEL CARD */
+
+.level-card{
+background:#fff;
+border-radius:14px;
+padding:24px;
+display:flex;
+gap:14px;
+align-items:flex-start;
+cursor:pointer;
+border:2px solid transparent;
+box-shadow:0 6px 18px rgba(0,0,0,.06);
+transition:.25s;
+position:relative;
+}
+
+.level-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 35px rgba(0,0,0,.12);
+}
+
+.level-card.selected{
+border-color:#6d5dfc;
+box-shadow:0 16px 40px rgba(109,93,252,.25);
+}
+
+.level-card.selected::after{
+content:"✓ Selected";
+position:absolute;
+top:12px;
+right:14px;
+font-size:12px;
+font-weight:700;
+color:#6d5dfc;
+}
+
+
+/* CARD ICON */
+
+.card-icon{
+font-size:2rem;
+color:#6d5dfc;
+min-width:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+/* STREAM BUTTONS */
+
+.stream-options{
+display:none;
+margin-top:14px;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.stream-btn{
+padding:8px 14px;
+border-radius:8px;
+background:#f1f3ff;
+border:none;
+cursor:pointer;
+font-weight:600;
+transition:.2s;
+}
+
+.stream-btn:hover{
+transform:translateY(-2px);
+background:#e8eaff;
+}
+
+.stream-btn.selected{
+background:#6d5dfc;
+color:#fff;
+}
+
+
+/* SUBJECT OPTIONS */
+
+.subject-title{
+margin-top:14px;
+font-weight:600;
+display:none;
+}
+
+#subjectOptions .stream-btn{
+background:#fff;
+border:2px solid #dcdcff;
+}
+
+#subjectOptions .stream-btn.selected{
+background:linear-gradient(135deg,#6d5dfc,#8f85ff);
+color:#fff;
+border-color:#6d5dfc;
+}
+
+
+/* ACTION BUTTONS */
+
+.actions{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.actions .btn{
+min-width:160px;
+text-align:center;
+}
+
+/* HOME BUTTON STYLE */
+
+.actions .secondary{
+background:#c4c8e9;
+color:#0f0798;
+border:1px solid #0c0c8b;
+font-weight:700;
+}
+
+.actions .secondary:hover{
+background:#ced2f5;
+}
+
+
+/* ERROR MESSAGE */
+
+.error{
+text-align:center;
+margin-top:15px;
+color:#b00020;
+font-weight:500;
+display:none;
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.level-page{
+padding:40px 20px;
+}
+
+.actions{
+flex-direction:column;
+align-items:center;
+}
+
+.actions .btn{
+width:220px;
+}
+
+}

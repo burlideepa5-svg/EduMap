@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduMap — UG Career Result</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/result_ug.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="result-card">
+
+      <!-- HEADER -->
+      <div class="result-header">
+        <div class="result-icon">🎯</div>
+        <div>
+          <h1>Your Personalized Career Guidance Report</h1>
+          <p class="muted">
+            Based on your background, traits, and future direction preferences.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROFILE SNAPSHOT -->
+      <section id="profileSnapshot" class="result-section">
+        <h2>🎓 Your Academic & Career Snapshot</h2>
+        <div class="result-box">
+          <p id="profileText">
+            Loading your profile...
+          </p>
+        </div>
+      </section>
+
+      <!-- TRAIT INSIGHTS -->
+      <section id="traitInsights" class="result-section">
+        <h2>✨ Your Dominant Career Traits</h2>
+        <p class="muted">
+          These traits are derived from your responses across the assessment.
+        </p>
+
+        <div id="traitChips" class="trait-chip-container">
+          <!-- JS inserts chips -->
+        </div>
+
+        <div class="result-box">
+          <p id="traitSummaryText">
+            Loading trait insights...
+          </p>
+        </div>
+      </section>
+
+      <!-- CAREER FIT SECTION -->
+      <section id="careerFields" class="result-section">
+        <h2>🚀 Career Fields That Fit You</h2>
+        <p class="muted">
+          Based on your background, strengths, and career mindset.
+        </p>
+
+        <div id="careerCards" class="career-card-grid">
+          <!-- JS inserts cards -->
+        </div>
+      </section>
+      <div class="explore-more-box">
+  <p>
+    Want to explore more options beyond these suggestions?
+  </p>
+  <a href="careers.html" class="explore-link">
+    🔍 Explore Other Career Paths
+  </a>
+</div>
+      <!-- RECOMMENDED PATHWAY -->
+      <section id="recommendedPath" class="result-section">
+        <h2>🌱 Your Recommended Next Path</h2>
+
+        <div class="highlight-box">
+          <h3 id="pathwayTitle">
+  Recommended Path:
+  <span id="pathBadge" class="path-badge">
+    Loading...
+  </span>
+</h3>
+          <p id="pathwayText">
+            Please wait while we analyze your responses.
+          </p>
+        </div>
+      </section>
+
+      <!-- ACTION ROADMAP -->
+      <section id="actionRoadmap" class="result-section">
+        <h2>🗺️ Guided Action Roadmap</h2>
+
+        <div class="roadmap-box">
+          <h3>📅 Next 30 Days</h3>
+          <ul id="roadmap30Days">
+            <!-- JS inserts -->
+          </ul>
+        </div>
+
+        <div class="roadmap-box">
+          <h3>📈 Next 3 Months</h3>
+          <ul id="roadmap3Months">
+            <!-- JS inserts -->
+          </ul>
+        </div>
+
+        <div class="roadmap-box">
+          <h3>🎯 Next 6 Months</h3>
+          <ul id="roadmap6Months">
+            <!-- JS inserts -->
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ACTION BUTTONS -->
+
+<div class="actions">
+
+  <a href="education.html" class="btn btn-secondary">
+    Retake Quiz
+  </a>
+
+  <a href="index.html" class="btn btn-primary">
+    Go Home
+  </a>
+
+</div>
+
+
+<!-- SHARE BUTTONS -->
+
+<div class="share-buttons">
+
+  <button class="download-btn" onclick="downloadPDF()">
+    📥 Download Result
+  </button>
+
+  <button class="whatsapp-btn" onclick="shareWhatsApp()">
+    📲 Share on WhatsApp
+  </button>
+
+</div>
+  </div>
+
+  <script>
+function downloadPDF(){
+  window.print();
+}
+
+function shareWhatsApp(){
+
+  const careers =
+    document.getElementById("careerCards")?.innerText || "";
+
+  const steps =
+    document.getElementById("actionRoadmap")?.innerText || "";
+
+  const text = `
+
+EduMap Career Result
+
+Career Fields:
+${careers}
+
+Next Steps:
+${steps}
+
+Generated via EduMap Career Guidance System.
+
+`;
+
+  window.open(
+    "https://wa.me/?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+}
+</script>
+
+  <script type="module" src="js/result_ug.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+/* ===== PAGE BACKGROUND ===== */
+
+body{
+background:#f6f7fb;;
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+}
+
+/* ===== HERO HEADER ===== */
+
+.hero{
+background:#5c4cec;
+padding:40px 20px;
+text-align:center;
+color:white;
+}
+
+.logo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.logo h1{
+margin:0;
+font-size:2rem;
+font-weight:700;
+}
+
+.icon{
+font-size:30px;
+}
+
+.tagline{
+margin-top:6px;
+opacity:.9;
+font-size:1rem;
+}
+
+/* ===== RESULT CONTAINER ===== */
+
+.result-container{
+max-width:1000px;
+margin:40px auto;
+padding:20px;
+}
+
+/* ===== RESULT SECTIONS ===== */
+
+.result-section{
+background:white;
+border-radius:18px;
+padding:26px;
+margin-bottom:26px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+border:1px solid #f1f2f8;
+}
+
+.result-section h3{
+font-size:1.05rem;
+font-weight:600;
+color:#333;
+margin-bottom:16px;
+}
+
+/* ===== STREAM CARD ===== */
+
+.stream-card{
+background:linear-gradient(135deg,#5a4bdb,#7b6cff);
+color:white;
+border-radius:18px;
+padding:28px;
+text-align:center;
+margin-bottom:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.stream-title{
+font-size:0.9rem;
+opacity:.85;
+margin-bottom:6px;
+}
+
+.stream-badge{
+font-size:2.2rem;
+font-weight:700;
+margin:6px 0;
+}
+
+.stream-reason{
+font-size:0.95rem;
+opacity:.9;
+max-width:520px;
+margin:auto;
+}
+
+.stream-pill{
+display:inline-block;
+background:rgba(255,255,255,.2);
+padding:6px 12px;
+border-radius:20px;
+font-size:.8rem;
+margin:4px;
+}
+
+.stream-compatibility{
+margin-top:20px;
+}
+
+.stream-row{
+margin-bottom:10px;
+}
+
+.stream-label{
+display:flex;
+justify-content:space-between;
+font-size:0.9rem;
+margin-bottom:4px;
+}
+
+.stream-bar{
+height:8px;
+background:#e7e7f2;
+border-radius:20px;
+overflow:hidden;
+}
+
+.stream-fill{
+height:100%;
+background:linear-gradient(90deg,#5a4bdb,#6356db);
+border-radius:20px;
+}
+/* ===== STRENGTH BARS ===== */
+
+.strength-item{
+margin-bottom:14px;
+}
+
+.strength-label{
+display:grid;
+grid-template-columns:160px 1fr 40px;
+align-items:center;
+font-size:0.9rem;
+margin-bottom:4px;
+}
+
+.strength-header{
+display:flex;
+justify-content:space-between;
+font-size:0.9rem;
+margin-bottom:4px;
+}
+
+.strength-bar{
+height:8px;
+background:#e7e7f2;
+border-radius:20px;
+overflow:hidden;
+}
+
+.strength-fill{
+height:100%;
+background:linear-gradient(90deg,#5a4bdb,#7b6cff);
+border-radius:20px;
+}
+/* ===== CAREER GRID ===== */
+
+.career-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:16px;
+}
+
+.career-card{
+background:white;
+border-radius:14px;
+padding:18px;
+border:1px solid #ececff;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:all .25s ease;
+}
+
+.career-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+}
+/* ===== CONFIDENCE BADGE ===== */
+
+.confidence-badge{
+display:inline-block;
+padding:4px 8px;
+border-radius:6px;
+font-size:0.75rem;
+color:white;
+margin-bottom:8px;
+}
+
+.explore-card{
+background:#f4f6ff;
+}
+
+/* ===== NEXT STEPS ===== */
+
+.next-steps{
+list-style:none;
+padding-left:0;
+}
+
+.next-steps li{
+padding:8px 0;
+border-bottom:1px dashed #ddd;
+}
+
+/* ===== BUTTONS ===== */
+
+.actions{
+text-align:center;
+margin-top:30px;
+}
+
+.actions .btn{
+margin:6px;
+}
+
+.actions{
+text-align:center;
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 22px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+font-size:0.9rem;
+transition:all .2s ease;
+margin:6px;
+}
+
+/* Retake Button */
+
+.btn-secondary{
+background:white;
+border:1px solid #cfd2ff;
+color:#5a5ee6;
+}
+
+.btn-secondary:hover{
+background:#f3f4ff;
+}
+
+/* Home Button */
+
+.btn-primary{
+background:#f4c400;
+color:#333;
+border:none;
+}
+
+.btn-primary:hover{
+background:#e5b800;
+}
+/* ===== SHARE BUTTONS ===== */
+
+.share-buttons{
+text-align:center;
+margin-top:20px;
+}
+
+.share-buttons button{
+margin:8px;
+padding:10px 18px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+font-weight:600;
+}
+
+.download-btn{
+background:#6d5dfc;
+color:white;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+}
+
+/* ===== PRINT MODE ===== */
+
+@media print{
+.actions,
+.share-buttons{
+display:none;
+}
+}
+
+.explore-more-box {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f5f7ff;
+  border-left: 4px solid #6c63ff;
+  border-radius: 6px;
+}
+
+.explore-more-box p {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.explore-link {
+  font-weight: 600;
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}

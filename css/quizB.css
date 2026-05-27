@@ -1,0 +1,296 @@
+/* =========================================
+   EduMap Quiz B - UG Assessment CSS
+   Full wizard-aligned styling
+========================================= */
+
+:root {
+  --bg: #f7f5ff;
+  --card: #ffffff;
+  --accent: #6d5dfc;
+  --accent-2: #7b6efc;
+  --muted: #9b97c9;
+  --soft: #efeaff;
+  --text: #2b235c;
+  --shadow: 0 10px 30px rgba(100, 80, 180, 0.06);
+}
+
+/* =========================================
+   Base
+========================================= */
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 900px;
+  margin: 36px auto;
+  padding: 16px;
+}
+
+.wizard-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  overflow: hidden;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.wizard-header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--soft), #f4efff);
+  color: var(--accent);
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(109, 93, 252, 0.06);
+}
+
+.wizard-title h2 {
+  margin: 0;
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   Progress Pills
+========================================= */
+
+.steps {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 18px;
+}
+
+.step-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.step-pill {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: #efeaff;
+  transition: all 0.25s ease;
+}
+
+.step-pill.active {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-2)
+  );
+}
+
+/* =========================================
+   Sections
+========================================= */
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =========================================
+   Question Cards
+========================================= */
+
+.question-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(109, 93, 252, 0.08);
+  box-shadow: 0 4px 18px rgba(109, 93, 252, 0.04);
+}
+
+.q-head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.q-num {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 12px;
+  background: #efeaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.q-head b {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #1f1f5c;
+  display: block;
+  flex: 1;
+}
+
+.q-body {
+  margin-top: 8px;
+}
+
+/* =========================================
+   MCQ Options
+========================================= */
+
+.mcq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mcq {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #faf8ff;
+  border: 1px solid rgba(109, 93, 252, 0.10);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mcq:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(109, 93, 252, 0.08);
+  border-color: rgba(109, 93, 252, 0.20);
+}
+
+.mcq.selected {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-2)
+  );
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(109, 93, 252, 0.16);
+  border-color: transparent;
+}
+
+/* =========================================
+   Navigation Buttons
+========================================= */
+
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 8px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-2)
+  );
+  color: white;
+  box-shadow: 0 10px 24px rgba(109, 93, 252, 0.08);
+}
+
+.btn.ghost {
+  background: #f6f5ff;
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* =========================================
+   Mobile Responsive
+========================================= */
+
+@media (max-width: 720px) {
+  .container {
+    padding: 10px;
+    margin: 18px auto;
+  }
+
+  .wizard-card {
+    padding: 16px;
+  }
+
+  .q-num {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .q-head b {
+    font-size: 0.95rem;
+  }
+
+  .wizard-nav {
+    gap: 10px;
+  }
+}
